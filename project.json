@@ -1,0 +1,76 @@
+{
+"version":1,
+"name":"DevMax Interpreter Test",
+"build_commands": {
+	"InterpretCC++" : {
+		"action":"interpret",
+		"args":["-fms-extensions", "-fms-compatibility", "-fms-compatibility-version=19.10.25017","-std=c++14", "-fdelayed-template-parsing","-fcxx-exceptions","-fexceptions","-x","c++"],
+		"sys_include_dir":["ucrt", "msvc"]
+	}
+},
+"build_definitions": [
+	{
+		"name":"Test Fibonacci",
+		"build_steps": [
+			{
+				"command":"InterpretCC++",
+				"inputs":["fibonacci.c"]
+			}
+		]
+	},
+	{
+		"name":"Test GCD",
+		"build_steps": [
+			{
+				"command":"InterpretCC++",
+				"inputs":["gcd.c"]
+			}
+		]
+	},
+	{
+		"name":"Test n-th Prime",
+		"build_steps": [
+			{
+				"command":"InterpretCC++",
+				"inputs":["prime.c"]
+			}
+		]
+	},
+	{
+		"name":"Test Console Output",
+		"build_steps": [
+			{
+				"command":"InterpretCC++",
+				"inputs":["console.cpp"]
+			}
+		]
+	},
+	{
+		"name":"Test simple C++ class",
+		"build_steps": [
+			{
+				"command":"InterpretCC++",
+				"inputs":["gauss.cpp"]
+			}
+		]
+	},
+	{
+		"name":"Test message dialog",
+		"build_steps": [
+			{
+				"command":"InterpretCC++",
+				"inputs":["dialog.cpp"]
+			}
+		]
+	},
+	{
+		"name":"Test All",
+		"build_steps": [
+			{
+				"command":"InterpretCC++",
+				"inputs":["fibonacci.c", "gcd.c", "prime.c", "console.cpp"]
+			}
+		]
+	}
+]
+}
