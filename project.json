@@ -64,6 +64,15 @@
 		]
 	},
 	{
+		"name":"Test assertion",
+		"build_steps": [
+			{
+				"command":"InterpretCC++",
+				"inputs":["assertion.cpp"]
+			}
+		]
+	},
+	{
 		"name":"Test All",
 		"build_steps": [
 			{

@@ -40,7 +40,18 @@ int prime_nth(int n)
 
 int main(int argc, const char **argv)
 {
+	PrintString("The 25th prime number is: ");
 	PrintInt(prime_nth(25));
+
+	PrintString("\nList of primes < 100:\n2\n");
+	for(int p = 3; p < 100; p += 2)
+	{
+		if (is_prime(p))
+		{
+			PrintInt(p);
+			PrintString("\n");
+		}
+	}
 
 	return 0;
 }
