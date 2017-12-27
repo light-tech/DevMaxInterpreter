@@ -1,7 +1,23 @@
 #include "common.h"
+
+// Uncomment if you have set-up the headers
+// #define HAS_STDC_HEADERS 1
+
+#ifdef HAS_STDC_HEADERS
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
+#else
+extern "C" {
+	// Add signature of these standard C functions
+	// that we are using directly
+	int sprintf(char *str, const char *format, ...);
+	double exp (double x);
+	double sin (double x);
+	int round(double x);
+	int strlen(const char *str);
+}
+#endif
 
 void PrintDouble(double num)
 {
