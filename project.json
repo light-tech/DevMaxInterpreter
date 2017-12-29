@@ -37,6 +37,15 @@
 		]
 	},
 	{
+		"name":"Test Dynamic Memory",
+		"build_steps": [
+			{
+				"command":"InterpretCC++",
+				"inputs":["dynmem.cpp"]
+			}
+		]
+	},
+	{
 		"name":"Test Console Output",
 		"build_steps": [
 			{
