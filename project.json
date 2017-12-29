@@ -73,6 +73,33 @@
 		]
 	},
 	{
+		"name":"Test user input",
+		"build_steps": [
+			{
+				"command":"InterpretCC++",
+				"inputs":["input.cpp"]
+			}
+		]
+	},
+	{
+		"name":"Test Http",
+		"build_steps": [
+			{
+				"command":"InterpretCC++",
+				"inputs":["web.cpp"]
+			}
+		]
+	},
+	{
+		"name":"Test File I/O",
+		"build_steps": [
+			{
+				"command":"InterpretCC++",
+				"inputs":["file.cpp"]
+			}
+		]
+	},
+	{
 		"name":"Test All",
 		"build_steps": [
 			{
